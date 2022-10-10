@@ -13,3 +13,12 @@ class TodoSerializer(serializers.Serializer):
                 {"message":"Assignment already exists."},status.HTTP_409_CONFLICT
             )
         return todo
+
+    def update(self, instance:Todo ,validated_data:dict):
+        for key, value in validated_data.items():
+            setattr(instance,key,value)
+            instance.save()
+
+        return instance
+    
+    
