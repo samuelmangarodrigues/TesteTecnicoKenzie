@@ -29,7 +29,18 @@ class TodoView(APIView):
             return Response(*err.args)
 
 class TodoViewId(APIView):
-  
+
+    def get(self, _: Request, todo_id: int):
+        try:
+            todo = get_object_or_404(Todo, pk=todo_id)
+            serialized = TodoSerializer(todo)
+
+            return Response(serialized.data, status.HTTP_200_OK)
+
+        except Http404:
+            return Response({"detail": "Task not found."}, status.HTTP_404_NOT_FOUND)
+
+
     def patch(self,request:Request,todo_id: int):
         try:
             todo = get_object_or_404(Todo,pk=todo_id)
