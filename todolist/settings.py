@@ -38,18 +38,19 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "corsheaders",
+    "rest_framework"
     "todo",
 ]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "corsheaders.middleware.CorsMiddleware",
-    "django.middleware.common.CommonMiddleware",
 ]
 ROOT_URLCONF = "todolist.urls"
 
@@ -113,11 +114,6 @@ USE_I18N = True
 
 USE_TZ = True
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "https://kenzietodo.vercel.app",
-    "https://test-kenzie.herokuapp.com",
-]
 CORS_ALLOW_ALL_ORIGINS: True
 
 # Static files (CSS, JavaScript, Images)
