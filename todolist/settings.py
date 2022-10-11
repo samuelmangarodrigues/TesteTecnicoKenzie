@@ -54,6 +54,12 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = "todolist.urls"
+CORS_ALLOWED_ORIGINS = [
+    "https://example.com",
+    "https://sub.example.com",
+    "http://localhost:8000",
+    "https://kenzietodo.vercel.app",
+]
 CORS_ALLOW_ALL_ORIGINS: True
 
 TEMPLATES = [
