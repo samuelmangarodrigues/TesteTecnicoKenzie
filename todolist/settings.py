@@ -43,14 +43,15 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    "corsheaders.middleware.CorsMiddleware",
-    "django.middleware.common.CommonMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
+    "django.middleware.common.CommonMiddleware",
 ]
+
 ROOT_URLCONF = "todolist.urls"
 
 TEMPLATES = [
@@ -117,7 +118,6 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "https://kenzietodo.vercel.app/",
 ]
-
 CORS_ALLOW_ALL_ORIGINS: True
 
 # Static files (CSS, JavaScript, Images)
@@ -127,7 +127,6 @@ STATIC_URL = "static/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
-
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 django_heroku.settings(locals())
