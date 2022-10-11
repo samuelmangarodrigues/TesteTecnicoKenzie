@@ -113,10 +113,10 @@ USE_I18N = True
 
 USE_TZ = True
 
-# CORS_ALLOWED_ORIGINS = [
-#     "http://localhost:3000",
-#     "https://kenzietodo.vercel.app",
-# ]
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "https://kenzietodo.vercel.app/",
+]
 
 CORS_ALLOW_ALL_ORIGINS: True
 
