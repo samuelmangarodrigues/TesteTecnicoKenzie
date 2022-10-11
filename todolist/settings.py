@@ -51,7 +51,6 @@ MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
 ]
-
 ROOT_URLCONF = "todolist.urls"
 
 TEMPLATES = [
@@ -117,8 +116,8 @@ USE_TZ = True
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "https://kenzietodo.vercel.app",
+    "https://test-kenzie.herokuapp.com",
 ]
-
 CORS_ALLOW_ALL_ORIGINS: True
 
 # Static files (CSS, JavaScript, Images)
