@@ -89,7 +89,7 @@ Retorna a tarefa específica de acordo com o Id da task, status 200 OK.
 
 ## Put | Todo
 
-`https://test-kenzie.herokuapp.com/api/todo/3`
+`https://test-kenzie.herokuapp.com/api/todo/3/`
 
 O usuário deve passar o id da task para completa-lá, status 200 OK.
 
@@ -113,7 +113,7 @@ Atualiza a chave completed, colocando-a como true.
 
 ## Patch | Todo
 
-`https://test-kenzie.herokuapp.com/api/todo/3`
+`https://test-kenzie.herokuapp.com/api/todo/3/`
 
 O usuário deve passar o id da task e a nova descrição da tarefa, status 200 OK.
 
@@ -138,7 +138,7 @@ O usuário deve passar o id da task e a nova descrição da tarefa, status 200 O
 
 ## Delete | Todo
 
-`https://test-kenzie.herokuapp.com/api/todo/3`
+`https://test-kenzie.herokuapp.com/api/todo/3/`
 
 O usuário deve passar o id da task para deleta-lá, status 200 OK.
 
